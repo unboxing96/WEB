@@ -1,0 +1,59 @@
+/* 아래에 CSS를 작성해주세요. */
+
+.container {
+  width: 300px;
+  margin: 20px;
+  white-space: nowrap;
+}
+
+.img {
+  border-radius: 0.5rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+h4 {
+  color: gray;
+  margin: 8px 0px;
+  font-size: 80%;
+}
+
+h3 {
+  text-align: left;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90%;
+  font-weight: 700;
+}
+
+.price {
+  margin: 5px 0px;
+  font-size: 160%;
+  font-weight: 1000;
+}
+
+.percent {
+  color: skyblue;
+}
+
+.review {
+  margin: 5px 0px;
+  font-size: 110%;
+  font-weight: bold;
+}
+
+.star {
+  color: rgb(62, 60, 60);
+  font-weight: bolder;
+}
+
+.reviews {
+  color: gray;
+}
