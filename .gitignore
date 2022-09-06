@@ -130,3 +130,5 @@ dmypy.json
 
 test.html
 test.css
+
+.DS_Store
