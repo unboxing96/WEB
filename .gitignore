@@ -132,3 +132,5 @@ test.html
 test.css
 
 .DS_Store
+
+*.svg
