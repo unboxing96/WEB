@@ -1,13 +1,33 @@
-.footer{
-  display: flex;
-  position: fixed;
+/* footer */
+html, body {
+  height: 100%
+}
+#content-wrap {
+  min-height: 100%;
+  position: relative;
+}
+footer {
   bottom: 0;
-  height: 40px;
+}
+
+
+
+
+
+
+#sidebar-wrapper {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  background: #000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#page-content-wrapper {
   width: 100%;
-  background-color: black;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  padding: 20px;
 }
 
 @media (min-width: 992px) {
@@ -21,4 +41,13 @@
   .main-table {
     display: none;
   }
+}
+
+@font-face {
+  font-family: NanumSquareWeb;
+  src: local(NanumSquareR), /* 첫번째 */
+       local(NanumSquare), /* 두번째 */
+       url(NanumSquareR.eot) format('embedded-opentype'),
+       url(NanumSquareR.woff) format('woff'), /* 세번째 */
+       url(NanumSquareR.ttf) format('truetype'); /* 네번째 */
 }
