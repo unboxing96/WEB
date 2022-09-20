@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+  <h1 class="btn-h1">로또 추천 번호</h1>
+  <div  class="btn-btn">
+    <button id="lotto-btn">행운 번호 받기</button>
+  </div>
+  <div id="result"></div>
+
+  <!-- 자바스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    const button = document.querySelector('#lotto-btn')
+    // 버튼 클릭 시)
+    button.addEventListener('click', function () {
+      // 컨테이너 객체 생성
+      const ballContainer = document.createElement('div')
+      ballContainer.classList.add('ball-container')
+
+
+
+      // 공 생성 => 6개 생성
+      const numbers = _.sampleSize(_.range(1, 46), 6)
+      console.log(numbers)
+
+      // 색상 표
+
+
+      // 공 객체 생성
+      for (let i = 0; i <= 5; i += 1) {
+        let ball = document.createElement('div');
+        ball.classList.add('ball');
+        ball.innerText = numbers[i];
+
+        // 공 색깔용 변수 & 조건문
+        let ballColor;
+
+        if (1 <= numbers[i] && numbers[i] <= 10) {
+          ballColor = 'yellow';
+        } else if(11 <= numbers[i] && numbers[i] <= 20){
+          ballColor = 'blue';
+        } else if(21 <= numbers[i] && numbers[i] <= 30){
+          ballColor = 'red';
+        } else if(31 <= numbers[i] && numbers[i] <= 40){
+          ballColor = 'gray';
+        } else if(41 <= numbers[i] && numbers[i] <= 45){
+          ballColor = 'green'
+        }
+
+        ball.style.backgroundColor = ballColor;
+
+        // 컨테이너 <= 공 연결
+        ballContainer.appendChild(ball)
+      };
+
+
+      // 결과 <= 컨테이너 연결
+      const result = document.querySelector('#result')
+      result.appendChild(ballContainer)
+    })
+  </script>
+
+</body>
+
+</html>
